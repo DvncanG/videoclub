@@ -5,7 +5,7 @@ class DB {
     protected $db;
 
     public function __construct() {
-        require_once 'config/config.php';
+        require_once '../config/config.php';
 
         try {
             $this->db = new PDO("mysql:host={$config['host']};dbname={$config['database']}", $config['user'], $config['password']);

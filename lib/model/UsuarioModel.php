@@ -1,6 +1,6 @@
 <?php
 
-class PeliculasModel{
+class UsuarioModel{
     
     private $db;
     
@@ -8,10 +8,9 @@ class PeliculasModel{
         $this->db = new DB();
     }
     
-    public function getAll() {
-       $query = $this->db->query("SELECT * FROM PELICULAS");
+    public function getAll(){
+        $query = $this->db->query("SELECT * FROM USUARIOS");
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
     
 }
-
