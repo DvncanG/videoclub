@@ -4,6 +4,6 @@ $config = [
   'host' => 'localhost',
   'user' => 'root',
   'password' => '',
-  'database' => 'blogejemplo'
+  'database' => 'videoclub'
 ];
 

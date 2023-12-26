@@ -1,14 +1,15 @@
 <?php
-
+require $_SERVER['DOCUMENT_ROOT'].'/videoclub/config/config.php';
 class DB {
     
     protected $db;
 
     public function __construct() {
-        require_once '../config/config.php';
 
         try {
+            
             $this->db = new PDO("mysql:host={$config['host']};dbname={$config['database']}", $config['user'], $config['password']);
+            var_dump($config);
             $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             echo $e->getMessage();
